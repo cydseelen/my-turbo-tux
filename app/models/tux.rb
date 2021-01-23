@@ -1,0 +1,2 @@
+class Tux < ApplicationRecord
+end
