@@ -1,0 +1,2 @@
+class TuxesController < ApplicationController
+end
