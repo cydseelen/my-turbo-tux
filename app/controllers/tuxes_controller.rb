@@ -5,11 +5,13 @@ class TuxesController < ApplicationController
     @tux = Tux.find(params[:id])
   end
 
-  def tux_params
-
+  
   def index
-    # @tuxes = policy.scope(Tux)
     @tuxes = Tux.all
-
+  end
+  
+  private
+  
+  def tux_params
   end
 end
