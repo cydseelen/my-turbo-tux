@@ -1,0 +1,13 @@
+<div class="border-bottom">
+  <div class = "d-flex justify-content-between align-items-center container p-3">
+    <p>My Bookings</p>
+    <p>User Account</p>
+  </div>
+</div>
+<div>
+  <ul>
+    <% @tuxes.each do |tux| %>
+    <li><%= link_to tux.name, tux_path(tux) %></li>
+    <% end %>
+  </ul>
+</div>

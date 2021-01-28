@@ -5,11 +5,13 @@ class BookingsController < ApplicationController
   end
 
   def create
+    @tux = Tux.find(params[:tux_id])
     @booking = Booking.new(booking_params[:id])
+    @booking.tux = @tux
     if @booking.save
     redirect_to booking_path(@booking)
     else
-    render :new
+    render "tux/show"
     end
   end
 
