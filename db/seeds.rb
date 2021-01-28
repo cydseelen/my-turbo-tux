@@ -5,3 +5,20 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+puts "Adding some Turbo Tux :)"
+
+Tux.create!(
+    price: 190.00,
+    description: 'firey',   
+)
+
+Tux.create!(
+    price: 134.00,
+    description: 'smokin',   
+)
+
+Tux.create!(
+    price: 166.00,
+    description: 'top gun',   
+)
