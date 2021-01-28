@@ -1,21 +1,25 @@
 <div class="border-bottom">
   <div class = "d-flex justify-content-between align-items-center container p-3">
-    <p>My Bookings</p>
+    <%= link_to "Add a Turbo Tux", new_tux_path %>
     <p>User Account</p>
   </div>
 </div>
 <div class="container">
+  <div class ="row">
+  </div>
   <div class="row">
     <div class="col-6">
-      <p>test col a</p>
+      <%= image_tag 'fabio_black.jpg' %>
     </div>
     <div class="col-6">
       <h1>Turbo Tux</h1>
-      <h2>Channel Your Inner Fabio</h2>
-   
+      <h2><i>Channel Your Inner Fabio</i></h2>
       <p>Turbo tux, Berlin's first on demand tux delivery service for when you need it the most because every girls crazy about a sharp dressed man.</p>
-      <a href="#" class="btn btn-primary">View Your Tux Now</a>
+      <%= link_to "View All Tuxes", tuxes_path, class: "btn btn-danger" %>
     </div>
   </div>
+</div>
+<%= image_tag 'roses.jpg' %>
+<%# <div class="row" style="background:transparent url('./assets/images/rose_petal_background.jpg') no-repeat center center /cover"> %>
 </div>
 

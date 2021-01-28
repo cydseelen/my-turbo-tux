@@ -6,10 +6,10 @@ class TuxesController < ApplicationController
   end
 
   def tux_params
+  end
 
   def index
     # @tuxes = policy.scope(Tux)
     @tuxes = Tux.all
-
   end
 end
