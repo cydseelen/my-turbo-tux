@@ -11,8 +11,9 @@
       <%= image_tag 'fabio_black.jpg' %>
     </div>
     <div class="col">
-      <h2><%= @tux.description %></h2>
-      <h3>€<%= @tux.price %>0 </h3>
+      <h2><%= @tux.name %></h2>
+      <h2>€<%= @tux.price %>0 </h2>
+      <h3><%= @tux.description %></h3>
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
       <span class="fa fa-star checked"></span>
@@ -23,15 +24,10 @@
       <br>
       <br>
 
-      <%#= link_to "Rent Now", new_booking_path, class: "btn btn-danger btn-lg" %>
-      <br>
       <%= simple_form_for [@tux, @booking] do |f| %>
-        <%#= f.association :tux, input_html: { class: "beautiful-dropdown" }, include_hidden: false %>
-        <%= f.input :date_rented %>
-        <%= f.input :date_returned %>
-        <%#= f.input :date_rented, as: :bootstrap_datepicker %>
-        <%#= f.input :date_returned, as: :bootstrap_datepicker %>
-        <%= f.button :submit, class: "btn btn-primary" %>
+      <%= f.input :date_rented, label: "Rental Date" %>
+      <%= f.input :date_returned, label: "Return Date" %>
+      <%= f.button :submit, class: "btn btn-danger btn-lg" %>
       <% end %>
       <br>
       <%= link_to 'Back to homepage', tuxes_path, class: "btn btn-outline-danger btn-sm" %>
