@@ -1,0 +1,17 @@
+.col {
+  margin-bottom: 200px;
+}
+
+a {
+  color: black;
+
+
+  &:hover {
+    text-decoration: none;
+    color: red;
+  }
+}
+
+h2 {
+  margin-bottom: 0px;
+}

@@ -1,8 +1,11 @@
 class BookingsController < ApplicationController
   def new
+
     @tux = Tux.find(params[:tux_id])
+
     @booking = Booking.new(params[:id])
     authorize @booking
+
   end
 
   def create
@@ -12,7 +15,7 @@ class BookingsController < ApplicationController
     @booking.user = current_user
     @booking.tux = @tux
     if @booking.save
-    redirect_to tuxes_path(@tux)
+    redirect_to new_tux_booking_path(@tux)
 
     authorize @booking
 

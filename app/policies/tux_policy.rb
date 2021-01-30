@@ -7,15 +7,15 @@ class TuxPolicy < ApplicationPolicy
   end
 
     def index?
-      return true
+      true
     end
-  
+
     def show?
-      return true
+      true
     end
 
     def create?
-      return true
+      true
     end
 
     def update?
@@ -23,7 +23,7 @@ class TuxPolicy < ApplicationPolicy
     end
 
     def home?
-      return true
+      true
     end
 
 end
