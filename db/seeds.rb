@@ -6,7 +6,14 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
+
+puts "Removing old tux database files"
+
+Tux.destroy_all
+
 puts "Adding some Turbo Tuxes :)"
+
+
 
 Tux.create!(
     price: 190.00,
