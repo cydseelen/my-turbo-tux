@@ -1,13 +1,20 @@
 <div class="border-bottom">
   <div class = "d-flex justify-content-between align-items-center container p-3">
     <p>My Bookings</p>
+    <h1>Turbo Tux</h1>
     <p>User Account</p>
   </div>
 </div>
-<div>
-  <ul>
+
+<div class="container">    
+  <div class="row">
     <% @tuxes.each do |tux| %>
-    <li><%= link_to tux.id, tux_path(tux) %></li>
-    <% end %>
-  </ul>
-</div>
+    <div class="col-sm-4">
+      <div class="panel panel-primary">
+        <div class="panel-heading" ><%= link_to tux.description.capitalize, tux_path(tux) %><%= tux.price %></div>
+        <div class="panel-body"><<%= image_tag 'fabio_black.jpg' %>></div>
+        <%# <div class="panel-footer"><%= tux.price %>
+      </div>
+    </div>
+  <% end %>
+</div><br><br>
