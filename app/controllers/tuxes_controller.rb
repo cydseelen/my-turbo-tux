@@ -5,18 +5,17 @@ class TuxesController < ApplicationController
   skip_before_action :authenticate_user!, only: [:home]
 
   def show
-    # authorize @tux
     @tux = Tux.find(params[:id])
     authorize @tux
   end
 
-  
+
   def index
     @tuxes = policy_scope(Tux)
   end
-  
+
   private
-  
+
   def tux_params
   end
 end
