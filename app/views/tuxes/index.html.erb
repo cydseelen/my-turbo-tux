@@ -7,20 +7,22 @@
 </div>
 
 
-<div class="container">
+<div class="container-index">
 <div class="card-grid">
   <% @tuxes.each do |tux| %>
       <%= link_to tux_path(tux) do %>
-        <div class=“tux-card”>
+        <div class= “tux-card” >
           <div class=“tux-card-content”>
             <div class=“tux-card-title”>
               <h1><%= tux.name %></h1>
             </div>
-            <h2>€<%= tux.price %>0</h2>
-            <p><%= tux.description %></p>
-          </div>
+            <h2><%= tux.price %>0</h2>
+            <br>
+            <p><%= tux.description.truncate(120)%>...</p>
+            <br>
           <div class=“tux-card-image” >
             <%= image_tag 'fabio_tux.jpg' %>
+          </div>
           </div>
        </div> 
     <%end %>
