@@ -36,9 +36,11 @@
   }
   
   .tux-card {
+    vertical-align: center;
+    align-content: center;
     text-align: center;
     width: 100%;
-    position: relative;
+    margin-top: 50px;
     margin: .5rem 0 1rem 0;
     background-color: rgb(223, 157, 157);
     border-radius: 2px;
@@ -46,11 +48,17 @@
     box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 1px 5px 0 rgba(0,0,0,0.12), 0 3px 1px -2px rgba(0,0,0,0.2);
   }
   .tux-card-image {
+    align-content: center;
     height: 100px;
     background-position: center;
     background-size: cover;
+    margin-bottom: 150px;
   }
   .tux-card-content {
+    align-content: center;
+    vertical-align: center;
+    align-items: center;
+    text-align: center;
     padding: 24px;
     background-color: #F8F9FA;
   }
