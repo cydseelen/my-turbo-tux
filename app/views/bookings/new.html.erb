@@ -1,7 +1,7 @@
-<h3>thank you for your booking</h3>
-<%= simple_form_for [@tux, @booking] do |f| %>
-  <%= f.association :tux, input_html: { class: "beautiful-dropdown" }, include_hidden: false %>
-  <%= f.input :date_rented %>
-  <%= f.input :date_returned %>
-  <%= f.button :submit, class: "btn btn-primary" %>
-<% end %>
+<div class = "d-flex justify-content-between align-items-center container p-3">
+    <%= link_to "Add a Turbo Tux", new_tux_path %>
+    <h1>Turbo Tux</h1>
+    <p>User Account</p>
+  </div>
+
+  <h3>thank you for your booking</h3>
