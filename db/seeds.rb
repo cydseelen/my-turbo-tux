@@ -10,7 +10,7 @@ puts "Adding some Turbo Tux :)"
 
 Tux.create!(
     price: 190.00,
-    description: 'Firey',
+    description: 'Smokin hot for a smokin hot day',
 )
 
 Tux.create!(
