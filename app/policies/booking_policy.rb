@@ -1,5 +1,6 @@
 class BookingPolicy < ApplicationPolicy
   class Scope < Scope
+
     def resolve
       scope.all
     end
@@ -7,5 +8,9 @@ class BookingPolicy < ApplicationPolicy
 
   def new?
     return true
+  end
+
+  def create?
+    true
   end
 end
