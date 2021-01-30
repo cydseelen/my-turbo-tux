@@ -6,15 +6,29 @@
   </div>
 </div>
 
-<div class="container">    
-  <div class="row">
-    <% @tuxes.each do |tux| %>
-    <div class="col-sm-4">
-      <div class="panel panel-primary">
-        <div class="panel-heading" ><%= link_to tux.description.capitalize, tux_path(tux) %><%= tux.price %></div>
-        <div class="panel-body"><<%= image_tag 'fabio_black.jpg' %>></div>
-        <%# <div class="panel-footer"><%= tux.price %>
-      </div>
-    </div>
+
+<div class="container">
+<div class="card-grid">
+  <% @tuxes.each do |tux| %>
+      <%= link_to tux_path(tux) do %>
+        <div class=“tux-card”>
+          <div class=“tux-card-content”>
+            <div class=“tux-card-title”>
+              <h1><%= tux.name %></h1>
+            </div>
+            <h2><%= tux.price %></h2>
+            <p><%= tux.description %></p>
+          </div>
+          <div class=“tux-card-image” >
+            <%= image_tag 'fabio_tux.jpg' %>
+          </div>
+       </div> 
+    <%end %>
   <% end %>
-</div><br><br>
+</div>
+</div>
+
+
+
+
+
