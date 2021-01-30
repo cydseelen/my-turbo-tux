@@ -7,6 +7,7 @@ class TuxesController < ApplicationController
   def show
     @tux = Tux.find(params[:id])
     authorize @tux
+    @booking = Booking.new
   end
 
 
@@ -17,5 +18,6 @@ class TuxesController < ApplicationController
   private
 
   def tux_params
+    params.require(:tux).permit(:description, :price)
   end
 end

@@ -1,16 +1,21 @@
 class BookingsController < ApplicationController
-
   def new
-    @booking = Booking.new
+    @tux = Tux.find(params[:tux_id])
+    @booking = Booking.new(params[:id])
     authorize @booking
   end
 
   def create
+
     @tux = Tux.find(params[:tux_id])
-    @booking = Booking.new(booking_params[:id])
+    @booking = Booking.new(booking_params)
+    @booking.user = current_user
     @booking.tux = @tux
     if @booking.save
-    redirect_to booking_path(@booking)
+    redirect_to tuxes_path(@tux)
+
+    authorize @booking
+
     else
     render "tux/show"
     end
@@ -20,7 +25,7 @@ class BookingsController < ApplicationController
     @booking = Booking.find(booking_params[:id])
     @booking.delete
 
-    redirect_to Booking_path(@booking)
+    redirect_to booking_path(@booking)
   end
 
 private
