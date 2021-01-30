@@ -6,22 +6,22 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-puts "Adding some Turbo Tux :)"
+puts "Adding some Turbo Tuxes :)"
 
 Tux.create!(
     price: 190.00,
-    description: 'Smokin hot for a smokin hot day',
-    name: 'Firey'
+    name: 'Firey',
+    description: "Shawls aren't just for little old ladies. This shawl collar tux feels both fresh and classic perfect for when you want to stand out a little."
 )
 
 Tux.create!(
     price: 134.00,
-    description: 'Red Tux',
-    name: 'Smokin'
+    name: "Smokin'",
+    description: "This is it: the notch lapel tuxedo you've been looking for. A modern take on the iconic tux, it looks great paired with a classic black bow tie or worn with something more unique. Do you."
 )
 
 Tux.create!(
     price: 166.00,
-    description: 'Black Tux',
-    name: 'Top Gun'
+    name: 'Top Gun',
+    description: "This is peak formalwear style, literally. It's tough to beat the classic yet statement-making look of a peak lapel tuxedo plus, the upward-pointing lapels frame your face and elongate your frame. Win, win."
 )
