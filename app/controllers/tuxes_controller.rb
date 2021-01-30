@@ -13,7 +13,7 @@ class TuxesController < ApplicationController
 
   def index
     @tuxes = policy_scope(Tux)
-    @tuxes = Tux.all
+
   end
 
   private
