@@ -1,8 +1,11 @@
 class BookingsController < ApplicationController
   def new
+
     @tux = Tux.find(params[:tux_id])
+
     @booking = Booking.new(params[:id])
     authorize @booking
+
   end
 
   def create
