@@ -1,4 +1,4 @@
-<div class="border-bottom">
+<div class="border-bottom white">
   <div class = "d-flex justify-content-between align-items-center container p-3">
     <%= link_to "Add a Turbo Tux", new_tux_path %>
     <h1>Turbo Tux</h1>
@@ -6,23 +6,20 @@
   </div>
 </div>
 <br>
-<div class=container">
-  <div class ="row">
-  </div>
-  <div class="row">
-    <div class="col-6">
-        <%= image_tag 'fabio_black.jpg'%>
-    </div>
-    <div class="col-6">
-      <div class="pink-card">
-      <h1>Turbo Tux</h1>
-      <h2><i>Channel Your Inner Fabio</i></h2>
+  <div class = "container">
+  <div class = "d-flex justify-content-center align-items-center container p-3">
+    <div class="white-card">
+    <%= image_tag 'TurboTux.jpg', style: "border-radius: 20px; height: 400px; width: 400px; margin-top: 50px"%>
+      <h1><i>Channel Your Inner Fabio</i></h1>
       <br>
-      <p>Tired of simply reading your Romance novels? Turbo tux, Berlin's first on demand tux delivery service for when you need it the most because every girls crazy about a sharp dressed man.</p>
       <%= link_to "View All Tuxes", tuxes_path, class: "btn btn-danger" %>
-      </div>
+      <br>
     </div>
   </div>
 </div>
+
+
+
+
 
 

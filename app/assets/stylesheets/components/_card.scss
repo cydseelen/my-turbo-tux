@@ -6,7 +6,7 @@
     padding: 10px 20px;
     text-align: center;
     font-family: arial;
-    background-color: pink;
+    background-color: rgb(235, 227, 228);
     border-radius: 5%;
   }
 
@@ -17,7 +17,17 @@
     font-family: arial;
     background-color: pink;
     border-radius: 10%;
-    padding: 150px 100px;
+    padding: 150 50;
+  }
+
+  .white-card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    margin: auto;
+    text-align: center;
+    font-family: arial;
+    background-color: rgb(235, 227, 228);
+    border-radius: 10%;
+    padding: 150 50;
   }
   
   .price {
