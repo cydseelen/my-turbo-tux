@@ -24,6 +24,11 @@
       <br>
       <br>
 
+      <%= link_to "Delete #{@tux.name}",
+	     tux_path(@tux),
+	     method: :delete,
+	     data: { confirm: "Are you sure" } %>
+
       <%= simple_form_for [@tux, @booking] do |f| %>
       <%= f.input :date_rented, label: "Rental Date" %>
       <%= f.input :date_returned, label: "Return Date" %>
