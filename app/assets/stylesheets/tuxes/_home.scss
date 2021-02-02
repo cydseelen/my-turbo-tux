@@ -1,6 +1,6 @@
 body {
-  background-image: url(/assets/roses.jpg);
+  background-image: url(asset_path("hearts.jpg"));
   background-position: center bottom;
-  background-repeat:no-repeat;
+  background-repeat: no-repeat;
   background-size: cover;
 }

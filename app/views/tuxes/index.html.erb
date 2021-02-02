@@ -5,30 +5,25 @@
     <p>User Account</p>
   </div>
 </div>
-
-
-<div class="container-index">
+<br>
+<br>
+<div class="container">
 <div class="card-grid">
   <% @tuxes.each do |tux| %>
-      <%= link_to tux_path(tux) do %>
-        <div class= “tux-card” >
-          <div class=“tux-card-content”>
-            <div class=“tux-card-title”>
-              <h1><%= tux.name %></h1>
-            </div>
-            <h2><%= tux.price %>0</h2>
-            <br>
-            <p><%= tux.description.truncate(120)%>...</p>
-            <br>
-          <div class=“tux-card-image” >
-            <%= image_tag 'fabio_tux.jpg' %>
-          </div>
-          </div>
-       </div> 
+    <%= link_to tux_path(tux) do %>
+     <div class="card">
+       <%= image_tag 'fabio_tux.jpg', style: 'border-radius: 10%, height: 50px, width: 50px, box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2)' %>
+       <%# <%= image_tag 'fabio_tux.jpg' %>
+       <h1><%= tux.name %></h1>
+       <p class="price">$<%= tux.price %>0</p>
+      <p><%= tux.description.truncate(120)%></p>
+      <p><button>Book Now</button></p>
+     </div>   
     <%end %>
   <% end %>
 </div>
 </div>
+
 
 
 
