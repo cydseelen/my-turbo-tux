@@ -3,27 +3,29 @@ class TuxPolicy < ApplicationPolicy
     def resolve
       scope.all
     end
-
   end
 
-    def index?
-      true
-    end
+  def index?
+    true
+  end
 
-    def show?
-      true
-    end
+  def show?
+    true
+  end
 
-    def create?
-      true
-    end
+  def create?
+    true
+  end
 
-    def update?
-      record.user == user
-    end
+  def new?
+    true
+  end
 
-    def home?
-      true
-    end
+  def update?
+    record.user == user
+  end
 
+  def home?
+    true
+  end
 end
