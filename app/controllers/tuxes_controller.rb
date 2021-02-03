@@ -10,7 +10,6 @@ class TuxesController < ApplicationController
     @booking = Booking.new
   end
 
-
   def index
     @tuxes = policy_scope(Tux)
 
