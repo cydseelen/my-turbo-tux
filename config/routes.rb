@@ -4,6 +4,6 @@ Rails.application.routes.draw do
   # tuxes  GET /tuxes tuxes#index
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
   resources :tuxes do
-    resources :bookings, only: [:new, :create, :delete]
+    resources :bookings, only: [:new, :create, :delete, :bookings]
   end
 end
