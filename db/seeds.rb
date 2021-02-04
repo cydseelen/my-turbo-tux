@@ -10,14 +10,14 @@
 puts "Removing old tux database files"
 
 Tux.destroy_all
-User.destroy_all
+# User.destroy_all
 
 puts "Adding some Turbo Tuxes :)"
 
-User.create!(
-    email: cydnie@mail.com,
-    password: "123456",
-  )
+# User.create!(
+#     email: cydnie@mail.com,
+#     password: "123456",
+#   )
 
 Tux.create!(
     user_id: 1,
