@@ -16,7 +16,7 @@ puts "Adding some Turbo Tuxes :)"
 
 User.create!(
     email: cydnie@mail.com,
-    password: "123456",
+    password: "123456"
   )
 
 Tux.create!(
