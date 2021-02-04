@@ -3,15 +3,12 @@
 <br>
 <div class="container">
 <div class="card-grid">
-  <% @bookings.each do |tux| %>
-    <%= link_to tux_path(tux) do %>
+  <% @bookings.each do |booking| %>
      <div class="card">
-       <h1><%= tux.name %></h1>
-       <p class="price">$<%= tux.price %>0</p>
-      <p><%= tux.description.truncate(120)%></p>
-
+       <h1><%= booking.tux.name %></h1>
+       <p class="price">$<%= booking.tux.price %>0</p>
+      <p><%= booking.tux.description.truncate(120)%></p>
      </div>
-    <%end %>
   <% end %>
 </div>
 </div>
