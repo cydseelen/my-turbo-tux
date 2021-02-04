@@ -3,6 +3,14 @@
   <div class="row">
     <div class="col">
       <%= image_tag 'fabio_black.jpg', style: "border-radius: 10%"%>
+      <br>
+      <br>
+      <% if @tux.user == current_user %>
+      <%= link_to "Delete #{@tux.name}",
+      tux_path(@tux), class: "btn btn-outline-danger btn-sm",
+      method: :delete,
+      data: { confirm: "Are you sure" } %>
+      <% end %>
     </div>
     <div class="col">
       <h2><%= @tux.name %></h2>
@@ -17,14 +25,6 @@
       <span class="fa fa-star"></span>
       <br>
       <br>
-
-      <% if @tux.user == current_user %>
-      <%= link_to "Delete #{@tux.name}",
-	     tux_path(@tux),
-	     method: :delete,
-	     data: { confirm: "Are you sure" } %>
-      <% end %>
-      
       <%= simple_form_for [@tux, @booking] do |f| %>
       <%= f.input :date_rented, label: "Rental Date" %>
       <%= f.input :date_returned, label: "Return Date" %>
