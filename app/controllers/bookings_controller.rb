@@ -1,4 +1,8 @@
 class BookingsController < ApplicationController
+  def index
+    @booking = Booking.all
+  end
+
   def new
 
     @tux = Tux.find(params[:tux_id])
