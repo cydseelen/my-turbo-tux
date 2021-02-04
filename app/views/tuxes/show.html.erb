@@ -4,6 +4,15 @@
     <div class="col">
       <%= image_tag 'fabio_black.jpg', style: "border-radius: 10%"%>
     </div>
+    <% if @tux.user == current_user %>
+      <%= link_to "Update #{@tux.name}",
+	     edit_tux_path(@tux)
+	    #  method: :update,
+	    #  data: { confirm: "Are you sure" } 
+      %>
+      <% end %>
+
+
     <div class="col">
       <h2><%= @tux.name %></h2>
       <h2>€<%= @tux.price %>0 </h2>
@@ -16,6 +25,8 @@
       <span class="fa fa-star"></span>
       <span class="fa fa-star"></span>
       <br>
+
+      
       <br>
 
       <% if @tux.user == current_user %>
