@@ -27,6 +27,7 @@ User.create!(
 puts "Adding some Turbo Tuxes :)"
 
 Tux.create!(
+    user_id: 1,
     user: User.first,
 
     price: 190.00,
@@ -35,6 +36,7 @@ Tux.create!(
 )
 
 Tux.create!(
+    user_id: 1,
 
     user: User.first,
 
@@ -44,7 +46,10 @@ Tux.create!(
 )
 
 Tux.create!(
+    user_id: 1,
+
     user: User.first,
+
     price: 166.00,
     name: 'Top Gun',
     description: "This is peak formalwear style, literally. It's tough to beat the classic yet statement-making look of a peak lapel tuxedo plus, the upward-pointing lapels frame your face and elongate your frame. Win, win."
