@@ -31,6 +31,13 @@ class TuxesController < ApplicationController
     @tuxes = policy_scope(Tux)
   end
 
+  def destroy
+    @tux = Tux.find(params[:id])
+    @tux.destroy
+    redirect_to root_path
+    authorize @tux
+  end
+
   private
 
   def tux_params

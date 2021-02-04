@@ -25,7 +25,12 @@ class TuxPolicy < ApplicationPolicy
     record.user == user
   end
 
+   def destroy?
+     record.user == user
+   end
+
   def home?
     true
   end
+
 end
