@@ -1,18 +1,10 @@
-<div class="border-bottom rose">
-  <div class = "d-flex justify-content-between align-items-center container p-3">
-    <p>My Bookings</p>
-    <h1>Turbo Tux</h1>
-    <p>User Account</p>
-  </div>
-</div>
-<br>
 <br>
 <div class="container">
 <div class="card-grid">
   <% @tuxes.each do |tux| %>
     <%= link_to tux_path(tux) do %>
      <div class="card">
-       <%= image_tag 'fabio_tux.jpg', style: "border-radius: 50%; height: 200px; width: 200px; margin: 10px 20px"%>
+       <%= image_tag "fabio/#{rand(7)}.jpg", style: "border-radius: 50%; height: 200px; width: 200px; margin: 10px 20px; object-fit: cover;"%>
        <%# <%= image_tag 'fabio_tux.jpg' %>
        <h1><%= tux.name %></h1>
        <p class="price">$<%= tux.price %>0</p>

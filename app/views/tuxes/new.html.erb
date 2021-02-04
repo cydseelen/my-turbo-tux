@@ -1,1 +1,15 @@
-<p>Pages</p>
+<div class="container">
+  <div class="white-card">
+  <h2>Rent out a Turbo Tux of your own</h2>
+
+  <%= simple_form_for @tux do |f| %>
+  <%= f.input :name %>
+  <%= f.input :price %>
+  <%= f.input :description %>
+  <%#= f.input :photo, as: :file %>
+  <%= f.button :submit, class: 'btn btn-danger btn-med' %>
+  <% end %>
+  <br>
+  <%= link_to 'View all tuxes', tuxes_path, class: "btn btn-outline-danger btn-sm" %>
+  </div>
+</div>

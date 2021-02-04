@@ -15,9 +15,13 @@
     margin: auto;
     text-align: center;
     font-family: arial;
-    background-color: pink;
+    background-color: rgb(250, 94, 90);
     border-radius: 10%;
     padding: 150 50;
+    background-image: url(asset_path("rose4.jpg"));
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
   }
 
   .white-card {
