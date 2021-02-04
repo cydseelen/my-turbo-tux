@@ -12,6 +12,11 @@ puts "Removing old tux database files"
 Tux.destroy_all
 User.destroy_all
 
+
+puts "Adding some Turbo Tuxes :)"
+
+
+
 puts "Creating a user :)"
 
 User.create!(
@@ -23,13 +28,16 @@ puts "Adding some Turbo Tuxes :)"
 
 Tux.create!(
     user: User.first,
+
     price: 190.00,
     name: 'Firey',
     description: "Shawls aren't just for little old ladies. This shawl collar tux feels both fresh and classic perfect for when you want to stand out a little."
 )
 
 Tux.create!(
+
     user: User.first,
+
     price: 134.00,
     name: "Smokin'",
     description: "This is it: the notch lapel tuxedo you've been looking for. A modern take on the iconic tux, it looks great paired with a classic black bow tie or worn with something more unique. Do you."
