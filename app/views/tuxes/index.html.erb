@@ -1,5 +1,13 @@
 <br>
 <div class="container">
+<%= form_tag tuxes_path, method: :get do %>
+  <%= text_field_tag :query,
+    params[:query],
+    class: "form-control",
+    placeholder: "Lookin for some hot stuff"
+  %>
+  <%= submit_tag "Search", class: "btn btn-danger" %>
+<% end %>
 <div class="card-grid">
   <% @tuxes.each do |tux| %>
     <%= link_to tux_path(tux) do %>
