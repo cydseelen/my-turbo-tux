@@ -1,6 +1,7 @@
 class TuxesController < ApplicationController
   include Pundit
   skip_after_action :verify_authorized, only: [:home]
+  before_action :skip_authorization #
 
   skip_before_action :authenticate_user!, only: [:home]
 
@@ -48,6 +49,6 @@ class TuxesController < ApplicationController
   private
 
   def tux_params
-    params.require(:tux).permit(:description, :price)
+    params.require(:tux).permit(:description, :price, :photo)
   end
 end

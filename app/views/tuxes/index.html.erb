@@ -15,10 +15,10 @@
        <%= image_tag "fabio/#{rand(7)}.jpg", style: "border-radius: 50%; height: 200px; width: 200px; margin: 10px 20px; object-fit: cover;"%>
        <%# <%= image_tag 'fabio_tux.jpg' %>
        <h1><%= tux.name %></h1>
-       <p class="price">$<%= tux.price %>0</p>
+       <p class="price">€<%= tux.price %>0</p>
       <p><%= tux.description.truncate(120)%></p>
       <p><button>Book Now</button></p>
-     </div>   
+     </div>
     <%end %>
   <% end %>
 </div>

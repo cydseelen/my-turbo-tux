@@ -2,7 +2,8 @@
 <div class="container">
   <div class="row">
     <div class="col">
-      <%= image_tag 'fabio_black.jpg', style: "border-radius: 10%"%>
+      <%#= image_tag 'fabio_black.jpg', style: "border-radius: 10%"%>
+      <%= cl_image_tag @tux.photo.key, height: 300, width: 400, crop: :fill %>
       <br>
       <br>
       <% if @tux.user == current_user %>
