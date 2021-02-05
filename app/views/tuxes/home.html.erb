@@ -1,10 +1,14 @@
   <div class = "container">
   <div class = "d-flex justify-content-center align-items-center container p-3">
     <div class="white-card">
-    <%= image_tag 'TurboTux.jpg', style: "border-radius: 20px; height: 400px; width: 400px; margin-top: 50px; margin-left: 150px; margin-right: 150px"%>
+    <%= image_tag 'TurboTux.jpg', style: "border-radius: 20px; height: 400px; width: 400px; margin-top: 50px; margin-left: 150px; margin-right: 150px; box-shadow: 0 0 80px 0 rgb(191,0,0);"%>
       <h1><i>Channel Your Inner Fabio</i></h1>
       <br>
-      <%= link_to "View All Tuxes", tuxes_path, class: "btn btn-danger btn-lg" %>
+      <div class= "card-clear">
+        <p>Berlin's first tux-on-demand service. Personal models available at your door upon request. </p>
+      </div>
+      <br>
+      <%= link_to "View All Tuxes", tuxes_path, style: "box-shadow: 0 0 80px 0 rgb(191,0,0);", class: "btn btn-danger btn-lg" %>
       <br>
       <br>
       <br>

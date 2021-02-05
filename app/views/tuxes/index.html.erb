@@ -1,11 +1,14 @@
 <br>
 <div class="container">
+<div class="card-clear">
+  <h1>Hey Tiger, Come Here Often? <i class="far fa-kiss-wink-heart"></i></h1>
+</div>
+<br>
 <div class="card-grid">
   <% @tuxes.each do |tux| %>
     <%= link_to tux_path(tux) do %>
      <div class="card">
-       <%= image_tag "fabio/#{rand(7)}.jpg", style: "border-radius: 50%; height: 200px; width: 200px; margin: 10px 20px; object-fit: cover;"%>
-       <%# <%= image_tag 'fabio_tux.jpg' %>
+       <%= image_tag "fabio/#{rand(7)}.jpg", style: "border-radius: 50%; height: 200px; width: 200px; margin: 10px 20px; object-fit: cover; box-shadow: 0 10px 20px 0 $blush;"%>
        <h1><%= tux.name %></h1>
        <p class="price">$<%= tux.price %>0</p>
       <p><%= tux.description.truncate(120)%></p>
