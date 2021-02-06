@@ -31,7 +31,10 @@ class TuxesController < ApplicationController
     @tuxes = policy_scope(Tux)
 
     if params[:query].present?
+
       @tuxes = Tux.search_by_name_and_description(params[:query])
+
+
     else
       @tuxes = Tux.all
     end
