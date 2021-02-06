@@ -8,6 +8,43 @@
     font-family: arial;
     background-color: rgb(235, 227, 228);
     border-radius: 5%;
+    box-shadow: 0 40px 80px 0 rgb(191,0,0);
+  }
+
+  .card-login {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    max-width: 600px;
+    //max-height: 300px;
+    //margin: auto;
+    margin-top: 50px;
+    padding: 10px 20px;
+    text-align: center;
+    font-family: arial;
+    background-color: rgb(235, 227, 228);
+    border-radius: 5%;
+    box-shadow: 0 40px 80px 0 rgb(191,0,0);
+  }
+
+  .card-shadow {
+    box-shadow: 0 40px 80px 0 rgb(191,0,0);
+    max-width: 600px;
+    margin: auto;
+    padding: 10px 20px;
+    text-align: center;
+    //background-color: rgb(250, 94, 90);
+    background-color: rgb(235, 227, 228);
+    opacity: 80%;
+    border-radius: 5%;
+  }
+
+  .card-clear {
+    max-width: 600px;
+    margin: auto;
+    padding: 1px 2px;
+    text-align: center;
+    //background-color: rgb(250, 94, 90);
+    //background-color: rgb(235, 227, 228);
+    opacity: 100%;
   }
 
   .pink-card {
@@ -18,6 +55,7 @@
     background-color: rgb(250, 94, 90);
     border-radius: 10%;
     padding: 150 50;
+    margin-top:20px;
     background-image: url(asset_path("rose4.jpg"));
     background-position: center bottom;
     background-repeat: no-repeat;
@@ -34,6 +72,17 @@
     padding: 150 50;
   }
 
+  .form-card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    margin: auto;
+    text-align: center;
+    font-family: arial;
+    background-color: rgba(255, 220, 215, 0.9);
+    border-radius: 25px;
+    padding: 35px;
+    width: 700px;
+  }
+
   .price {
     color: grey;
     font-size: 22px;
@@ -44,7 +93,8 @@
     outline: 0;
     padding: 12px;
     color: white;
-    background-color: #000;
+    background-color: rgb(250, 94, 90);
+    border-radius: 50%;
     text-align: center;
     cursor: pointer;
     width: 100%;
