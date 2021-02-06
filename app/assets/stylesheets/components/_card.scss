@@ -12,6 +12,21 @@
     box-shadow: 0 40px 80px 0 rgb(191,0,0);
   }
 
+  .cardconfirmation {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    max-width: 600px;
+    margin-top: 50px;
+    height: 500px;
+    margin: auto;
+    padding: 30px 60px;
+    text-align: center;
+    font-family: arial;
+    background-color: rgb(235, 227, 228);
+    border-radius: 5%;
+    box-shadow: 0 40px 80px 0 rgb(191,0,0);
+  }
+
+
   .card-login {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     max-width: 600px;
@@ -82,6 +97,13 @@
     border-radius: 25px;
     padding: 35px;
     width: 700px;
+  }
+
+.container1 {
+    margin: 50px;
+    margin-top: 50px;
+    padding: 35px;
+
   }
 
   .price {
