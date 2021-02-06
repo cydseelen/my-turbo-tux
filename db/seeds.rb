@@ -6,6 +6,8 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
+require 'open-uri'
+
 
 puts "Removing old tux database files"
 
@@ -29,10 +31,10 @@ puts "Adding some Turbo Tuxes :)"
 Tux.create!(
     user_id: 1,
     user: User.first,
-
     price: 190.00,
     name: 'Firey',
-    description: "Shawls aren't just for little old ladies. This shawl collar tux feels both fresh and classic perfect for when you want to stand out a little."
+    description: "Shawls aren't just for little old ladies. This shawl collar tux feels both fresh and classic perfect for when you want to stand out a little.",
+    # url = "https://res.cloudinary.com/cydseelen/image/upload/v1612617441/h1438v7s71xkt3bn09pimtwkkh1u.jpg"
 )
 
 Tux.create!(
