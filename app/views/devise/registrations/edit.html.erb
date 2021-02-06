@@ -2,7 +2,7 @@
 <br>
 <br>
   <div class="pink-card">
-    <div class="card">
+    <div class="form-card">
 <h2>Edit <%= resource_name.to_s.humanize %></h2>
 
 <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
@@ -35,9 +35,9 @@
 
 <h3>Cancel my account</h3>
 
-<p>Too much magic, stud? Don't worry, you can cancel. <%= link_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete %></p>
-
-<%= link_to "Back", :back %>
+<p>Too much magic, stud? Don't worry, you can cancel.</p> 
+<p><%= link_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete %></p>
+<%= link_to link_to "Back", :back, style: "box-shadow: 0 0 80px 0 rgb(191,0,0);", class: "btn btn-danger" %>
     </div>
   </div>
 </div>

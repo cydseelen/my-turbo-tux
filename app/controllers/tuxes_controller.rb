@@ -11,11 +11,10 @@ class TuxesController < ApplicationController
 
   def create
     @tux = Tux.new(tux_params)
+    authorize @tux
+
     if @tux.save
       redirect_to tux_path(@tux)
-
-      authorize @tux
-
     else
       render 'new'
     end
@@ -44,6 +43,7 @@ class TuxesController < ApplicationController
   def edit
     @tux = Tux.find(params[:id])
   end
+
   def update
     @tux = Tux.find(params[:id])
     @tux.update(tux_params)
