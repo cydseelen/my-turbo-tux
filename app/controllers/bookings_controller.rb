@@ -1,6 +1,6 @@
 class BookingsController < ApplicationController
   def index
-    @booking = Booking.all
+    @bookings = policy_scope(Booking).where(user: current_user)
   end
 
   def new
@@ -31,7 +31,6 @@ class BookingsController < ApplicationController
   def delete
     @booking = Booking.find(booking_params[:id])
     @booking.delete
-
     redirect_to booking_path(@booking)
   end
 

@@ -29,6 +29,13 @@ class TuxesController < ApplicationController
 
   def index
     @tuxes = policy_scope(Tux)
+
+    if params[:query].present?
+      @tuxes = Tux.search_by_name_and_description_and_price(params[:query])
+    else
+      @tuxes = Tux.all
+    end
+
   end
 
   def edit
