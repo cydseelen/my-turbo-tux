@@ -43,12 +43,14 @@ class TuxesController < ApplicationController
 
   def edit
     @tux = Tux.find(params[:id])
+    authorize @tux
   end
   def update
     @tux = Tux.find(params[:id])
+    authorize @tux
     @tux.update(tux_params)
     redirect_to tux_path(@tux)
-    authorize @tux
+    
 end
 
 
