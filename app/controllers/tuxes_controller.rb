@@ -1,6 +1,7 @@
 class TuxesController < ApplicationController
   include Pundit
   skip_after_action :verify_authorized, only: [:home]
+  before_action :skip_authorization #
 
   skip_before_action :authenticate_user!, only: [:home]
 
@@ -13,7 +14,8 @@ class TuxesController < ApplicationController
     @tux = Tux.new(tux_params)
     authorize @tux
 
-    if @tux.save
+    @tux.user = current_user
+    if @tux.save!
       redirect_to tux_path(@tux)
     else
       render 'new'
@@ -33,25 +35,23 @@ class TuxesController < ApplicationController
 
       @tuxes = Tux.search_by_name_and_description(params[:query])
 
-
     else
       @tuxes = Tux.all
     end
-
   end
 
   def edit
     @tux = Tux.find(params[:id])
+    authorize @tux
   end
 
   def update
     @tux = Tux.find(params[:id])
+    authorize @tux
     @tux.update(tux_params)
     redirect_to tux_path(@tux)
-    authorize @tux
+    
 end
-
-
 
   def destroy
     @tux = Tux.find(params[:id])
@@ -63,6 +63,6 @@ end
   private
 
   def tux_params
-    params.require(:tux).permit(:name, :description, :price)
+    params.require(:tux).permit(:name, :description, :price, :photo)
   end
 end
