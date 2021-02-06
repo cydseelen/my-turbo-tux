@@ -1,14 +1,21 @@
-
 <br>
 <div class="container">
-<div class="card-grid">
-  <% @bookings.each do |booking| %>
-     <div class="card">
-       <h1><%= booking.tux.name %></h1>
-       <p class="price">$<%= booking.tux.price %>0</p>
-       <p><%= booking.date_rented%> - <%= booking.date_returned%></p>
+  <div class="card-clear">
+    <h1>My Bookings <i class="far fa-kiss-wink-heart"></i></h1>
+  </div>
+  <div class="card-grid">
+    <% @bookings.each do |booking| %>
+    <div class="card-1">
+      <%#= booking.tux.photo.attached? %>
+      <%#= cl_image_tag booking.tux.photo.key, style: "border-radius: 50%; height: 200px; width: 200px; margin: 10px 20px; object-fit: cover; box-shadow: 0 10px 20px 0 $blush;" %>
+      <%# end %>
+      <h1><%= booking.tux.name %></h1>
+      <p class="price">€<%= booking.tux.price %>0</p>
+      <p><%= booking.date_rented%> - <%= booking.date_returned%></p>
       <p><%= booking.tux.description.truncate(120)%></p>
-     </div>
-  <% end %>
-</div>
+    </div>
+    <% end %>
+  </div>
+  <br>
+  <%= link_to 'Return to Tuxes', tuxes_path, class: "btn btn-danger btn-sm" %>
 </div>
