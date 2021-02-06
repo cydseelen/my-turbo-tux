@@ -1,6 +1,7 @@
 .navbar-lewagon {
   justify-content: space-between;
   background: white;
+  font: bolder;
 }
 
 .navbar-lewagon .navbar-collapse {
@@ -12,6 +13,8 @@
 }
 
 .rose {
-  background-color: rgb(238, 186, 184);;
-  opacity: 60%;
+  //background-color: rgb(238, 186, 184);
+  background-color: $redrose;
+  opacity: 80%;
+  color:rgb(235, 227, 228);
 }

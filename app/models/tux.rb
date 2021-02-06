@@ -5,14 +5,12 @@ class Tux < ApplicationRecord
   has_many :users, through: :bookings
   belongs_to :user
 
-  
-  
-  include PgSearch::Model
-  pg_search_scope :search_by_name_and_description_and_price,
-    against: [ :name, :description, :price ],
+  include PgSearch::Model 
+  pg_search_scope :search_by_name_and_description,
+    against: [ :name, :description ],
     using: {
       tsearch: { prefix: true }
     }
-
+ 
 
 end

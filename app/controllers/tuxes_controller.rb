@@ -31,7 +31,10 @@ class TuxesController < ApplicationController
     @tuxes = policy_scope(Tux)
 
     if params[:query].present?
-      @tuxes = Tux.search_by_name_and_description_and_price(params[:query])
+
+      @tuxes = Tux.search_by_name_and_description(params[:query])
+
+
     else
       @tuxes = Tux.all
     end
@@ -48,6 +51,6 @@ class TuxesController < ApplicationController
   private
 
   def tux_params
-    params.require(:tux).permit(:description, :price)
+    params.require(:tux).permit(:name, :description, :price)
   end
 end
