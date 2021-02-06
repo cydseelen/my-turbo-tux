@@ -1,8 +1,10 @@
 <div class="container">
   <div class="row">
     <div class="col">
-
-      <%= image_tag 'fabio_black.jpg', style: "border-radius: 10%; box-shadow: 0 0 300px 0 rgb(191,0,0);"%
+      <% if @tux.photo.attached? %>
+      <%= cl_image_tag @tux.photo.key, height: 300, width: 400, crop: :fill, style: "border-radius: 10%; box-shadow: 0 0 300px 0 rgb(191,0,0);" %>
+      <% end %>
+      <%#= image_tag 'fabio_black.jpg', style: "border-radius: 10%; box-shadow: 0 0 300px 0 rgb(191,0,0);"%>
       <br>
       <br>
       <% if @tux.user == current_user %>
@@ -12,15 +14,12 @@
       data: { confirm: "Are you sure" } %>
       <% end %>
 
-    </div>
-    <% if @tux.user == current_user %>
+      <% if @tux.user == current_user %>
       <%= link_to "Update #{@tux.name}",
-	     edit_tux_path(@tux)
-	    #  method: :update,
-	    #  data: { confirm: "Are you sure" } 
+      edit_tux_path(@tux), class: "btn btn-outline-danger btn-sm"
       %>
       <% end %>
-
+    </div>
 
     <div class="col">
       <h2><%= @tux.name %></h2>
@@ -35,7 +34,7 @@
       <span class="fa fa-star"></span>
       <br>
 
-      
+
       <br>
       <%= simple_form_for [@tux, @booking] do |f| %>
       <%= f.input :date_rented, label: "Rental Date" %>
