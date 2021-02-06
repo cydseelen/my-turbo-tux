@@ -6,8 +6,7 @@
      <div class="card">
        <h1><%= booking.tux.name %></h1>
        <p class="price">$<%= booking.tux.price %>0</p>
-       <p><%#= booking.date_rented(120)%></p>
-       <p><%#= booking.date_returned(120)%></p>
+       <p><%= booking.date_rented%> - <%= booking.date_returned%></p>
       <p><%= booking.tux.description.truncate(120)%></p>
      </div>
   <% end %>
