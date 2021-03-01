@@ -4,7 +4,7 @@
       <% if @tux.photo.attached? %>
       <%= cl_image_tag @tux.photo.key, height: 600, width: 400, crop: :fill, style: "border-radius: 10%; box-shadow: 0 0 300px 0 rgb(191,0,0);" %>
       <% end %>
-      <%#= image_tag 'fabio_black.jpg', style: "border-radius: 10%; box-shadow: 0 0 300px 0 rgb(191,0,0);"%>
+      <%= image_tag 'model1.jpg', style: "border-radius: 10%; box-shadow: 0 0 300px 0 rgb(191,0,0); height: 450px; width: 400px;"%>
       <br>
       <br>
       <% if @tux.user == current_user %>

@@ -1,6 +1,10 @@
 .navbar-lewagon {
+  display: flex;
   justify-content: space-between;
   background: white;
+  position: sticky;
+  top: 0;
+  z-index: 100;
   font: bolder;
 }
 
@@ -13,8 +17,7 @@
 }
 
 .rose {
-  //background-color: rgb(238, 186, 184);
   background-color: $redrose;
-  opacity: 80%;
+  opacity: 85%;
   color:rgb(235, 227, 228);
 }
