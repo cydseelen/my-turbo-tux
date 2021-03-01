@@ -4,6 +4,7 @@
     max-width: 300px;
     height: 500px;
     margin: auto;
+    margin-bottom: 34px;
     padding: 10px 20px;
     text-align: center;
     font-family: arial;
@@ -129,11 +130,11 @@
     outline: 0;
     padding: 12px;
     color: white;
-    background-color: rgb(250, 94, 90);
-    border-radius: 50%;
+    background-color: $redrose;
+    border-radius: 22px;
     text-align: center;
     cursor: pointer;
-    width: 100%;
+    width: 60%;
     font-size: 18px;
   }
 
